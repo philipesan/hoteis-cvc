@@ -6,11 +6,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.prova.cvc.models.Hotel;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
