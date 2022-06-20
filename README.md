@@ -61,9 +61,11 @@ Tecnologias Usadas
 ### 400: Erro nos parâmetros da requisição
 ### 404: Cidade não existente
 #### Cidades possíveis
-- PORTO SEGURO: 1032
-- SAO PAULO: 7110
-- RIO DE JANEIRO: 9626
+| Cidade 	| Código 	|
+|---	|---	|
+| São Paulo 	| 9626 	|
+| Rio de Janeiro 	| 7110 	|
+| Porto Seguro 	| 1032 	|
 ### 500: Erro de execução, é necessário avaliar os logs
 ### 502: Erro na resposta do Broker, JSON Inválido
 
