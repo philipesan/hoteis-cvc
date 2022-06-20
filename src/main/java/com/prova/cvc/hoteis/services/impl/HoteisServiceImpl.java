@@ -56,6 +56,11 @@ public class HoteisServiceImpl implements HoteisService {
 			return ResponseEntity.status(404).body(respostaRequest);
 		}
 		
+		if(numberOfAdults.equals("0")) {
+			respostaRequest.setMessage("Erro: Pelo menos uma pessoa adulta deve estar inclusa no pacote");
+			return ResponseEntity.status(400).body(respostaRequest);
+		}
+		
 		if(!HoteisServiceUtils.validaRequest(cityId, numberOfAdults, numberOfChildren, hotelId, checkInDate, checkOutDate)) {
 			respostaRequest.setMessage("Erro: Verifique os parametros da requisição");
 			return ResponseEntity.status(400).body(respostaRequest);
