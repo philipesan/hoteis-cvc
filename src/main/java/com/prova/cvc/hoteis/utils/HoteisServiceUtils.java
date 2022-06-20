@@ -16,7 +16,7 @@ public class HoteisServiceUtils {
 		DateTime dataInicio = HoteisServiceUtils.converterEmData(dtInicio);
 		DateTime dataFim = HoteisServiceUtils.converterEmData(dtFim);
 
-		return Long.valueOf(Math.abs(Days.daysBetween(dataFim, dataInicio).getDays()));
+		return Long.valueOf(Days.daysBetween(dataInicio, dataFim).getDays());
 	}
 
 	public static DateTime converterEmData(String data) throws IllegalArgumentException {

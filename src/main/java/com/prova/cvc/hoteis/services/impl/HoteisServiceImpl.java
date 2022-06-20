@@ -49,7 +49,7 @@ public class HoteisServiceImpl implements HoteisService {
     	
 		ApiResponseDTO respostaRequest = new ApiResponseDTO();
 		ResponseEntity<ApiResponseDTO> respostaEntidade;
-		
+
 		if(!CityIdsEnum.checaExistencia(cityId)) {
 		
 			respostaRequest.setMessage("Erro: Cidade não encontrada");
@@ -67,7 +67,12 @@ public class HoteisServiceImpl implements HoteisService {
 		try {
 	    	BigDecimal numOfAdults = BigDecimal.valueOf(Long.valueOf(numberOfAdults));
 	    	BigDecimal numOfChildren = BigDecimal.valueOf(Long.valueOf(numberOfChildren));		
-			BigDecimal numDiarias = BigDecimal.valueOf(HoteisServiceUtils.calcularData(checkInDate, checkOutDate));
+	    	Long totalDiarias = HoteisServiceUtils.calcularData(checkInDate, checkOutDate);
+	    	if (totalDiarias <= 0) {
+				respostaRequest.setMessage("Erro: Check In não deve ser após o Check out");
+				return ResponseEntity.status(400).body(respostaRequest);
+	    	}
+			BigDecimal numDiarias = BigDecimal.valueOf(totalDiarias);
 			List<Hotel>  resposta = this.buscaDados(uri);
 			
 			if(resposta.size() == 0) {
