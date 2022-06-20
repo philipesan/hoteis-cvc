@@ -18,5 +18,5 @@ import lombok.Setter;
 public class HotelResponseDTO extends Hotel {
 	private String city;
 	private String name;
-	private List<RoomResponseDTO> responseRooms;
+	private List<RoomResponseDTO> rooms;
 }

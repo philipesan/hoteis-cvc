@@ -108,7 +108,7 @@ public class HoteisServiceImpl implements HoteisService {
 									return quartoResposta;
 								}).collect(Collectors.toList());
 						
-						hotelResposta.setResponseRooms(quartosResposta);
+						hotelResposta.setRooms(quartosResposta);
 						return hotelResposta;
 					}).collect(Collectors.toList());
 			
