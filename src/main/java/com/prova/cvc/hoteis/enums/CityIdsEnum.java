@@ -5,8 +5,8 @@ import lombok.Getter;
 @Getter
 public enum CityIdsEnum {
 	PORTO_SEGURO("1032"),
-	SAO_PAULO("7110"),
-	RIO_DE_JANEIRO("9626");
+	RIO_DE_JANEIRO("7110"),
+	SAO_PAULO("9626");
 	
 	
 	private String valorCidade;

@@ -93,7 +93,7 @@ public class HoteisServiceImpl implements HoteisService {
 						hotelResposta.setCity(hotel.getCityName());
 						hotelResposta.setName(hotel.getName());
 						
-						List<RoomResponseDTO> quartosResposta = hotel.getRooms().stream().map(
+						List<RoomResponseDTO> quartosResposta = hotel.getRooms().parallelStream().map(
 								quarto -> {
 									RoomResponseDTO quartoResposta = new RoomResponseDTO();
 									
