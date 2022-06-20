@@ -40,7 +40,7 @@ Tecnologias Usadas
             "id": 1,
             "name": "Hotel Teste 1",
             "city": "Porto Seguro",
-            "responseRooms": [
+            "rooms": [
                 {
                     "id": 0,
                     "category": {
